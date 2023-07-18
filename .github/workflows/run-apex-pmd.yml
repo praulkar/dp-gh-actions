@@ -1,0 +1,16 @@
+name: Run Apex PMD
+
+on:
+  pull_request:
+    branches:
+      - '*'
+  workflow_dispatch:
+  
+jobs:
+  apex_pmd_scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: apex-scan
+        run: echo "Starting apex static code scan"
+        shell: bash
